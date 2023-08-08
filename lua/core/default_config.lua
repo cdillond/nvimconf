@@ -10,8 +10,8 @@ M.ui = {
   hl_add = {},
   hl_override = {},
   changed_themes = {},
-  theme_toggle = { "onedark", "one_light" },
-  theme = "onedark", -- default theme
+  theme_toggle = { "tundra", "onenord_light" },
+  theme = "tundra", -- default theme
   transparency = false,
   lsp_semantic_tokens = false, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
 
@@ -40,7 +40,7 @@ M.ui = {
 
   -- lazyload it when there are 1+ buffers
   tabufline = {
-    show_numbers = false,
+    show_numbers = true,
     enabled = true,
     lazyload = true,
     overriden_modules = nil,

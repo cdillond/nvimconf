@@ -1,5 +1,31 @@
 local M = {}
 
+M.abc = {
+  n = {
+     --["<C-n>"] = {"<cmd> Telescope <CR>", "Telescope"},
+     ["<S-s>"] = {":Telescope Files <CR>", "Telescope Files"},
+     ["keys"] = {"action", "description", opts = {}},
+     ["<S-n>"] = {"<cmd> NvimTreeToggle <CR>", "Toggle nvimtree"},
+     ["<leader>ff"] = {"<cmd> Telescope <CR>", "Telescope"},
+     [";"] = { ":", "enter cmdline", opts = { nowait = true } },
+     ["<C-;>"] = {":qa! <CR>", "Quit all!"},
+     ["<C-s>"] = {":w <CR>", "Save file"},
+     ["<leader>tt"] = {
+  function()
+     require("base46").toggle_transparency()
+  end,
+  "toggle transparency",
+},
+
+  },
+
+  i = {
+     ["jk"] = { "<ESC>", "escape insert mode" , opts = { nowait = true }},
+     ["<C-s>"] = {"<ESC> :w <CR>", "Save file"},
+  }
+}
+
+
 M.dap = {
   plugin = true,
   n = {
